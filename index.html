@@ -8,8 +8,6 @@
    </head>
    <body>
       <script>
-            // JSON array of Certificates            
-            
 
             var certificates = [
                 { certGroup: "Project Management", certName: "PRINCE2 Foundation",       certDate: "2016-05-30",  certDescription: "PRINCE2 Foundation Certificate in Project Management" ,        certURL: "https://candidate.peoplecert.org/ReportsLink.aspx?argType=1&id=C86B6B02FAB371B4D223A12C09D20E5B4126C9B94629133C63BC446A6BDC3F87DBE125E32BD4B0A5" },
@@ -30,14 +28,15 @@
                 { certGroup: "ML & AI",            certName: "Ethics in Genr AI",        certDate: "2023-07-09",  certDescription: "Ethics in the Age of Generative AI",                           certURL: "https://www.linkedin.com/learning/certificates/a14ab850b218b5d29dde3f8febc22a277f24276516d817760e1037077960cf06?u=105858922"},
                 { certGroup: "ML & AI",            certName: "AI Ethics",                certDate: "2023-10-05",  certDescription: "Artificial Intelligence Ethics Certification (Udemy)",         certURL: "https://amdocsglobal.udemy.com/certificate/UC-1a2e9240-b0d8-4244-9283-fe58c9c81328/"},
                 { certGroup: "ML & AI",            certName: "AI Aware",                 certDate: "2023-10-05",  certDescription: "AI Aware(Malaysian Ministry of Digital & Intel)",              certURL: "https://aiur.ai.gov.my/#/badge?id=U2FsdGVkX1p1L2u3S6ks1L2a3S4h0ouE8XS9Yue5xSJdR5s1L2a3S4hT2SZMXGBceDi4OwBVkNRm34Qs1L2a3S4hgVsia4"},
-                { certGroup: "ML & AI",            certName: "AI Appreciate",            certDate: "2023-10-05",  certDescription: "AI Appreciate(Malaysian Ministry of Digital & Intel)",         certURL: "https://aiur.ai.gov.my/#/badge?id=U2FsdGVkX182p0tQNVrgcX5WJqkzKUw15w8pFJsLejE9QiaKR41kOcpQtqqYTeaI"},                                
+                { certGroup: "ML & AI",            certName: "AI Appreciate",            certDate: "2023-10-05",  certDescription: "AI Appreciate(Malaysian Ministry of Digital & Intel)",         certURL: "https://aiur.ai.gov.my/#/badge?id=U2FsdGVkX182p0tQNVrgcX5WJqkzKUw15w8pFJsLejE9QiaKR41kOcpQtqqYTeaI"},
+                { certGroup: "ML & AI",            certName: "Proj Mgmt. with ChatGPT",  certDate: "2023-10-05",  certDescription: "Project Management with ChatGPT: Complete Guide(Udemy)",       certURL: "https://amdocsglobal.udemy.com/certificate/UC-405ae8d1-5a2e-4482-a2aa-937bb43840e8/"},
                 { certGroup: "Social Media, Arts", certName: "Social Media Visuals",     certDate: "2022-02-19",  certDescription: "Canva to Create Social Media Visuals for Business(Coursera)",  certURL: "https://www.coursera.org/account/accomplishments/verify/77JZYWLFGVZF"},
                 { certGroup: "Social Media, Arts", certName: "YouTube Creator",          certDate: "2023-09-15",  certDescription: "YouTube Creator Course: Audio & Video Production (Udemy)",     certURL: "https://amdocsglobal.udemy.com/certificate/UC-e5469b33-58a4-4b64-a5f9-ee0f3d10babc/"},
                 { certGroup: "Social Media, Arts", certName: "Power BI Dashboards",      certDate: "2021-12-28",  certDescription: "Power BI: Dashboards for Beginners",                           certURL: "https://www.linkedin.com/learning/certificates/0a9e350ff599a0fd9c195eae2f4bf503616477b321ab8dd3fa59d8f3fa011852"},
                 { certGroup: "Security",           certName: "GDPR Compliance",          certDate: "2021-09-07",  certDescription: "GDPR Compliance: Essential Training",                          certURL: "https://www.linkedin.com/learning/certificates/3937716ce7f9b5b53bb91aba2ab7ef1cf83b6244f9ff7e9658d057d39a0de2e8"},
                 { certGroup: "Security",           certName: "Ethical Hacker",           certDate: "2023-12-30",  certDescription: "Ethical Hacker (Cisco)",                                       certURL: "https://www.credly.com/badges/bd4ff4c5-1fa6-4904-8e57-d06889d95c79/public_url"},
-                { certGroup: "Security",           certName: "UM CyberSafe Core",        certDate: "2025-05-21",  certDescription: "UM CyberSafe Cybersecurity Core Modules (Universiti Malaya)",  certURL: "https://cybersafe.um.edu.my/member/certificate.html?id=7c3f313a-4de1-438d-acfe-0ec6ef5d984f"},                
-                { certGroup: "Security",           certName: "UM CyberSafe Bonus",       certDate: "2025-05-21",  certDescription: "UM CyberSafe Cybersecurity Bonus Modules (Universiti Malaya)", certURL: "https://cybersafe.um.edu.my/member/certificate.html?id=e286be34-8041-4d14-b680-804672c9ec46"},                
+                { certGroup: "Security",           certName: "UM CyberSafe Core",        certDate: "2025-05-21",  certDescription: "UM CyberSafe Cybersecurity Core Modules (Universiti Malaya)",  certURL: "https://cybersafe.um.edu.my/member/certificate.html?id=7c3f313a-4de1-438d-acfe-0ec6ef5d984f"},
+                { certGroup: "Security",           certName: "UM CyberSafe Bonus",       certDate: "2025-05-21",  certDescription: "UM CyberSafe Cybersecurity Bonus Modules (Universiti Malaya)", certURL: "https://cybersafe.um.edu.my/member/certificate.html?id=e286be34-8041-4d14-b680-804672c9ec46"},
                 { certGroup: "Coding",             certName: "Build Android App",        certDate: "2018-06-16",  certDescription: "Build Your First Android App (Coursera)",                      certURL: "https://www.coursera.org/account/accomplishments/verify/FTWZSQ3GYLGB"},
                 { certGroup: "Coding",             certName: "Python Web Scraping",      certDate: "2021-09-26",  certDescription: "Web Scraping with Python (LinkedIn)",                          certURL: "https://www.linkedin.com/learning/certificates/fa8c57951685f3f7140ce1be968b90357618189246d74579b52e50cab52b2208"},
                 { certGroup: "Coding",             certName: "Learning Python",          certDate: "2022-08-11",  certDescription: "Learning Python (LinkedIn)",                                   certURL: "https://www.linkedin.com/learning/certificates/5d860680270b8394a3b766ce5a74d4ba7fc4c0975e314022c56498b8d76a1abd"},
@@ -50,7 +49,7 @@
              ];
 
             //var redirectUrlPrefix = "index.html?id=";
-            //var redirectUrlPrefix = "./?id=" ;    // This does not work on offline/local file
+            //var redirectUrlPrefix = "./?id=" ;       // This does not work on offline/local file
             var redirectUrlPrefix =  window.location.href.split('?')[0] + "?id=";
 
             // Function to find and redirect based on certName
@@ -62,11 +61,11 @@
                     }
                 }
 
-                // id not found, display default page
+                // id not found, so display default page
                 displayCertificateList();
             }
 
-            // Function to display the certificate list as a table. This is used when wrong/no parameter is passed
+            // Function to display the certificate list as a table. This is used when incorrect or no parameter is passed
             function displayCertificateList() {
             	  var pageHtml = "<h1> This is an interstitial page which provides shorter links to certificates</h1> If you reached here, then I must have put wrong link/code in my CV, so here is full list of certificates.<br><br>"
                 pageHtml += "<table border='1' id='certTable'><tr><th>#</th><th>Grouping</th><th>Redirection Link</th><th>Description & Direct Link</th></tr>";
@@ -80,11 +79,9 @@
                 document.body.innerHTML = pageHtml;
             }
 
-            // Get the query parameter from the URL
+            // Extract the query parameter from the URL & display the certificate.
             var params = new URLSearchParams(window.location.search);
             var certNameParam = params.get("id");
-
-            // Check if the certNameParam is provided
             if (certNameParam) {
                 redirectToCert(certNameParam);
             } else {
