@@ -17,6 +17,6 @@ Access the [Live version here](https://arun-ks.github.io/cert/)
 - [X] Enhancement: Update default page to show full list of certificates
 - [ ] Enhancement: Find way to log access attempts
 - [X] Usability: Create category-based sections within the table
-- [ ] Usability: Allow filtering/search on the table.
+- [X] Usability: Allow filtering/search on the table.
 - [ ] Usability: Allow sorting on the table.
 </details>
