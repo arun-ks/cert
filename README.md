@@ -1,8 +1,8 @@
 # Redirection to Links for Certificates
 
-The URL link for online Training Certificates are very long & look unsightly in resumes.
+The URL links for online Training Certificates are often very long & look unsightly in printed resumes.
 
-This is a simple to reuseable page which uses a JSON array to store the URL Link of the certificate, its description & an internal _Redirection short-name_ for certificates.
+This repo creates a simple, reuseable page which uses a JSON array to store (among other things) the URL Link of the certificate and an internal _Redirection short-name_ for certificates.
 
 When the page is opened with a command line parameter("id"), it will search through the JSON array for matching _"Redirection short-name"_, find the corresponding URL Link & redirect to it.
 
