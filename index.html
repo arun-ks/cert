@@ -2,9 +2,20 @@
 <html lang="en">
    <head>
      <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta name="description" content="Short redirect links for training certificates">
-     <title>Get Certificate</title>
+     <title>Certificate Catalogue — Arun K Sivanandan</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="style.css">
+     <script>
+       (function () {
+         const savedTheme = localStorage.getItem("aks-theme");
+         const preferredTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+         document.documentElement.dataset.theme = savedTheme || preferredTheme;
+       }());
+     </script>
    </head>
 
    <body>
@@ -74,12 +85,31 @@
            // Function to display the certificate list as a table. This is used when incorrect or no parameter is passed
            function displayCertificateList() {
              let html = `
-             <div class="container">
-               <h1> This is an interstitial page which provides shorter links to certificates</h1>
-               <p class="subtitle"> If you reached here, then I must have put wrong link/code in my CV, so here is full list of certificates. </p>
+             <div class="ambient ambient-one"></div>
+             <div class="ambient ambient-two"></div>
+             <header class="site-header">
+               <a class="brand" href="https://arun-ks.github.io/" aria-label="Return to Arun K Sivanandan portfolio">
+                 <span>AKS</span><strong>Arun K Sivanandan</strong>
+               </a>
+               <div class="header-actions">
+                 <a class="back-link" href="https://arun-ks.github.io/#credentials">Back to portfolio <span aria-hidden="true">&#8599;</span></a>
+                 <button class="theme-toggle" type="button" aria-label="Switch colour theme" onclick="toggleTheme()">
+                   <span class="sun" aria-hidden="true">&#9728;</span><span class="moon" aria-hidden="true">&#9790;</span>
+                 </button>
+               </div>
+             </header>
+             <main class="container">
+               <section class="catalogue-heading">
+                 <p class="eyebrow">07 — Credentials &amp; toolkit</p>
+                 <h1>Certificate <span>catalogue.</span></h1>
+                 <p class="subtitle">A searchable record of professional qualifications, technical training, and continuous learning.</p>
+               </section>
 
-               <input id="certFilter" type="text" placeholder="Filter by group, name or issuer…" oninput="filterTable()">
-               <table id="certTable">
+               <section class="catalogue-panel" aria-label="Certificate catalogue">
+                 <label class="filter-label" for="certFilter">Search certificates</label>
+                 <input id="certFilter" type="search" placeholder="Filter by group, name or issuer…" oninput="filterTable()">
+                 <div class="table-wrap">
+                   <table id="certTable">
                  <thead> <tr> <th>#</th> <th>Group</th> <th>Certificate</th> <th>Issuer</th> <th>Date</th> <th>ShortName</th> </tr></thead>
                  <tbody>`;
 
@@ -97,10 +127,15 @@
 
              html += `
                  </tbody>
-               </table>
+                   </table>
+                 </div>
+               </section>
 
-               <div class="showSource"><a href="https://github.com/arun-ks/cert/">Source</a> </div>
-             </div>`;
+               <footer>
+                 <span>Certificate links are maintained in a dedicated catalogue.</span>
+                 <a href="https://github.com/arun-ks/cert/">View source <span aria-hidden="true">&#8599;</span></a>
+               </footer>
+             </main>`;
 
              document.body.innerHTML = html;
            }
@@ -115,6 +150,12 @@
                const issuer   = row.children[3].innerText.toLowerCase();
                row.style.display =  group.includes(q) || issuer.includes(q) || certName.includes(q)      ? ""   : "none";
              });
+           }
+
+           function toggleTheme() {
+             const nextTheme = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+             document.documentElement.dataset.theme = nextTheme;
+             localStorage.setItem("aks-theme", nextTheme);
            }
 
            const params = new URLSearchParams(window.location.search);
